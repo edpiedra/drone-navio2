@@ -52,4 +52,4 @@ git pull origin $BRANCH
 EOF
 
 echo "installing $BRANCH..."
-bash "shared/install/install.sh"
+bash "$HOME/$REPO/shared/install/install.sh"
