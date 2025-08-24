@@ -45,7 +45,7 @@ cat <<EOF | sudo tee "$GIT_PULL_SCRIPT" > /dev/null
 #!/bin/bash
 
 cd $HOME/$REPO/shared 
-git pull origin main 
+git pull origin main_branch 
 
 cd $HOME/$REPO/config 
 git pull origin $BRANCH 
