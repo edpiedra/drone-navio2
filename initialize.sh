@@ -33,7 +33,7 @@ echo "cloning $BRANCH..."
 cd $HOME
 git clone https://github.com/edpiedra/$REPO.git 
 cd $REPO 
-git worktree add ../shared main 
+git worktree add ../shared main_branch
 git worktree add ../config $BRANCH 
 
 echo "creating git pull scripts..."
