@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
+export REPO="drone-navio2"
 export MAIN_SCRIPTS_DIR="$HOME/$REPO/shared/install/scripts"
 
 source "$MAIN_SCRIPTS_DIR/00_common.env"
