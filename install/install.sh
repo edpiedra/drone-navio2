@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-export SCRIPT_NAME=$(basename "$0")
-export MAIN_SCRIPTS_DIR="$HOME/$SCRIPT_NAME/shared/install/scripts"
+export MAIN_SCRIPTS_DIR="$HOME/$REPO/shared/install/scripts"
 
 source "$MAIN_SCRIPTS_DIR/00_common.env"
 source "$MAIN_SCRIPTS_DIR/00_lib.sh"
