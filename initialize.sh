@@ -32,7 +32,7 @@ sudo apt-get update && sudo apt-get install -y -qq git
 echo "cloning $BRANCH..."
 cd $HOME
 git clone https://github.com/edpiedra/$REPO.git 
-cd $REPO 
+cd $HOME/$REPO 
 git worktree add ../shared main_branch
 git worktree add ../config $BRANCH 
 
