@@ -33,8 +33,8 @@ echo "cloning $BRANCH..."
 cd $HOME
 git clone https://github.com/edpiedra/$REPO.git 
 cd $HOME/$REPO 
-git worktree add ../shared main_branch
-git worktree add ../config $BRANCH 
+git worktree add ./shared main_branch
+git worktree add ./config $BRANCH 
 
 echo "creating git pull scripts..."
 if [ ! -d $SCRIPTS_DIR ]; then 
