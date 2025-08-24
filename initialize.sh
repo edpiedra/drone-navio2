@@ -21,8 +21,8 @@ else
     echo "⚠️  Unknown or unsupported combination"
 fi
 
-if [ ! grep "DRONE_CONFIG" ~/.bashrc ]; then 
-    echo "export DRONE_CONFIG=$BRANCH" >> ~/.bashrc
+if [ ! grep "REPO" ~/.bashrc ]; then 
+    echo "export REPO=$REPO" >> ~/.bashrc
 fi 
 source ~/.bashrc
 
