@@ -21,11 +21,6 @@ else
     echo "⚠️  Unknown or unsupported combination"
 fi
 
-if [ ! grep "REPO" ~/.bashrc ]; then 
-    echo "export REPO=$REPO" >> ~/.bashrc
-fi 
-source ~/.bashrc
-
 echo "installing system package..."
 sudo apt-get update && sudo apt-get install -y -qq git 
 
