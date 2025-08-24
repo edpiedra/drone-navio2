@@ -2,6 +2,20 @@
 set -Eeuo pipefail
 
 REPO="drone-navio2"
+LOG_DIR="$HOME/logs"
+
+if [ ! -d "$LOG_DIR" ]; then 
+    mkdir "$LOG_DIR" 
+fi 
+
+INSTALL_FLAG="$LOG_DIR/initialize"
+
+echo "checking to see if previous initialization ran successfully..."
+if [ -f "$INSTALL_FLAG" ]; then 
+    log "Initialization was already run successfully..."
+    bash "$HOME/$REPO/shared/install/install.sh"
+fi 
+
 SCRIPTS_DIR="$HOME/scripts"
 GIT_PULL_SCRIPT="$SCRIPTS_DIR/git_pull.sh"
 
@@ -45,6 +59,8 @@ git pull origin main_branch
 cd $HOME/$REPO/config 
 git pull origin $BRANCH 
 EOF
+
+touch $INSTALL_FLAG 
 
 echo "installing $BRANCH..."
 bash "$HOME/$REPO/shared/install/install.sh"
