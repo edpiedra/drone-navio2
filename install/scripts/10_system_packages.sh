@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+source "$MAIN_SCRIPTS_DIR/00_common.env"
+source "$MAIN_SCRIPTS_DIR/00_lib.sh"
+
+log "updating system packages..."
+sudo apt-get update && sudo apt-get -y -qq dist-upgrade
