@@ -12,10 +12,17 @@ if [ ! -d "$LOG_DIR" ]; then
     mkdir "$LOG_DIR" 
 fi
 
-if [[ "${1:-}" == "--post-navio2-kernel-reboot" ]]; then
-    log "post-navio2 kernel reboot tasks starting..."
+if [[ "${1:-}" == "--post-filesystem-reboot" ]]; then
+    log "post-filesystem reboot tasks starting..."
 
     for step in "$SCRIPTS_DIR"/1[0-9][0-9]_*.sh; do 
+        run_step "$step"
+    done 
+    
+elif [[ "${1:-}" == "--post-navio2-kernel-reboot" ]]; then
+    log "post-navio2 kernel reboot tasks starting..."
+
+    for step in "$SCRIPTS_DIR"/2[0-9][0-9]_*.sh; do 
         run_step "$step"
     done 
 

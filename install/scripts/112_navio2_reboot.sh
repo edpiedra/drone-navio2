@@ -5,7 +5,7 @@ SCRIPT_NAME=$(basename "$0")
 source "$MAIN_SCRIPTS_DIR/00_common.env"
 source "$MAIN_SCRIPTS_DIR/00_lib.sh"
 
-INSTALL_FLAG="/tmp/install-after-reboot"
+INSTALL_FLAG="/tmp/install-post-navio2-kernel-reboot"
 WRAPPER_SCRIPT="/usr/local/bin/install-wrapper.sh"
 
 log "preparing for reboot..."

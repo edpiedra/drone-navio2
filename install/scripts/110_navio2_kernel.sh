@@ -70,10 +70,10 @@ log "installing rcio.fw..."
 sudo wget -qO /lib/firmware/rcio.fw $FIRMWARE_URL
 
 log "adding Navio2 overlays..."
-sudo bash "$MAIN_SCRIPTS_DIR/21_navio2_overlays.sh"
+sudo bash "$MAIN_SCRIPTS_DIR/111_navio2_overlays.sh"
 
 log "preparing for reboot..."
-sudo bash "$MAIN_SCRIPTS_DIR/22_navio2_reboot.sh"
+sudo bash "$MAIN_SCRIPTS_DIR/112_navio2_reboot.sh"
 
 touch "$INSTALL_FLAG"
 
