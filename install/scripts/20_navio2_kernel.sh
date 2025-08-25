@@ -46,7 +46,7 @@ scripts/config --file .config \
     --enable CONFIG_PREEMPT_RT
 
 set +e
-yes "" | make ARCH=arm CROSS_COMPILE=armv-linux-gnueabihf- olddefconfig
+yes "" | make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- olddefconfig
 MAKE_RC=$?
 set -e
 
