@@ -22,7 +22,7 @@ echo $DRONE_CONFIG
 > to handle install breaks
 ```
 cd ~
-bash drone-navio2/shared/install/install.sh {optional parameter}
+bash drone-navio2/initialize.sh {optional parameter}
 # optional parameters:
 # --reinstall : removes install flags from completed tasks
 ```
