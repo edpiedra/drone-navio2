@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
+MAIN_SCRIPTS_DIR="$HOME/$REPO/shared/install/scripts"
 SCRIPT_NAME=$(basename "$0")
 source "$MAIN_SCRIPTS_DIR/00_common.env"
 source "$MAIN_SCRIPTS_DIR/00_lib.sh"
