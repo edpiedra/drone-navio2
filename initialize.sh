@@ -13,7 +13,11 @@ INSTALL_FLAG="$LOG_DIR/initialize"
 echo "checking to see if previous initialization ran successfully..."
 if [ -f "$INSTALL_FLAG" ]; then 
     log "Initialization was already run successfully..."
-    bash "$HOME/$REPO/shared/install/install.sh"
+    if [[ "${1:-}" == "--reinstall" ]]; then
+        bash "$HOME/$REPO/shared/install/install.sh --reinstall"
+    else 
+        bash "$HOME/$REPO/shared/install/install.sh"
+    fi
 fi 
 
 SCRIPTS_DIR="$HOME/scripts"
