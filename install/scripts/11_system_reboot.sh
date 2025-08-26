@@ -3,8 +3,7 @@ set -Eeuo pipefail
 
 SCRIPT_NAME=$(basename "$0")
 
-REPO="drone-navio2"
-MAIN_SCRIPTS_DIR="$HOME/$REPO/shared/install/scripts"
+MAIN_SCRIPTS_DIR="/home/pi/drone-navio2/shared/install/scripts"
 source "$MAIN_SCRIPTS_DIR/00_common.env"
 source "$MAIN_SCRIPTS_DIR/00_lib.sh"
 
