@@ -17,7 +17,6 @@ if [ ! -f "$INSTALL_FLAG" ]; then
 fi 
 
 log "preparing for reboot..."
-export MAIN_SCRIPTS_DIR=$MAIN_SCRIPTS_DIR
 sudo bash "$MAIN_SCRIPTS_DIR/11_system_reboot.sh"
 
 read -p "→ Exanded filesystem. Press ENTER to reboot." _
