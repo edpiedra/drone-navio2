@@ -14,10 +14,11 @@ if [ ! -f "$INSTALL_FLAG" ]; then
     log "exanding filesystem..."
     sudo raspi-config --expand-rootfs
     touch "$INSTALL_FLAG"
+
+    #log "preparing for reboot..."
+    #bash "$MAIN_SCRIPTS_DIR/11_system_reboot.sh"
+
+    read -p "→ Exanded filesystem. Press ENTER to reboot." _
+    sudo reboot
 fi 
 
-log "preparing for reboot..."
-bash "$MAIN_SCRIPTS_DIR/11_system_reboot.sh"
-
-read -p "→ Exanded filesystem. Press ENTER to reboot." _
-sudo reboot
