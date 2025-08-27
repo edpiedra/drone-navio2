@@ -26,6 +26,6 @@ if [ -f "$INSTALL_FLAG" ]; then
 fi
 EOF
 
-chmod +x "$WRAPPER_SCRIPT"
+sudo chmod +x "$WRAPPER_SCRIPT"
 (crontab -l 2>/dev/null; echo "@reboot $WRAPPER_SCRIPT") | crontab -
 
