@@ -72,8 +72,8 @@ sudo wget -qO /lib/firmware/rcio.fw $FIRMWARE_URL
 log "adding Navio2 overlays..."
 sudo bash "$MAIN_SCRIPTS_DIR/111_navio2_overlays.sh"
 
-log "preparing for reboot..."
-bash "$MAIN_SCRIPTS_DIR/112_navio2_reboot.sh"
+#log "preparing for reboot..."
+#bash "$MAIN_SCRIPTS_DIR/112_navio2_reboot.sh"
 
 touch "$INSTALL_FLAG"
 
