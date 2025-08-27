@@ -5,15 +5,13 @@ SCRIPT_NAME=$(basename "$0")
 source "$MAIN_SCRIPTS_DIR/00_common.env"
 source "$MAIN_SCRIPTS_DIR/00_lib.sh"
 
-INSTALL_FLAG="$LOG_DIR/filesystem-expansion"
-
 log "updating system packages..."
 sudo apt-get update && sudo apt-get -y -qq dist-upgrade
 
-if [ ! -f "$INSTALL_FLAG" ]; then
+if [ ! -f "$EXPANSION_INSTALL_FLAG" ]; then
     log "exanding filesystem..."
     sudo raspi-config --expand-rootfs
-    touch "$INSTALL_FLAG"
+    touch "$EXPANSION_INSTALL_FLAG"
 
     #log "preparing for reboot..."
     #bash "$MAIN_SCRIPTS_DIR/11_system_reboot.sh"

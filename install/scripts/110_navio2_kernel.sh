@@ -9,10 +9,9 @@ KERNEL_REPO="https://github.com/emlid/linux-rt-rpi.git"
 KERNEL_BRANCH="rpi-5.10.11-navio"
 BUILD_DIR="$HOME/navio2-kernel"
 FIRMWARE_URL="https://github.com/emlid/rcio-firmware/raw/master/rcio.fw"
-INSTALL_FLAG="$LOG_DIR/navio2-kernel"
 
 log "checking to see if previous install ran successfully..."
-if [ -f "$INSTALL_FLAG" ]; then 
+if [ -f "$NAVIO2_KERNEL_INSTALL_FLAG" ]; then 
     log "Navio2 kernal install was already run successfully..."
     return 0 
 fi 
@@ -75,7 +74,7 @@ sudo bash "$MAIN_SCRIPTS_DIR/111_navio2_overlays.sh"
 #log "preparing for reboot..."
 #bash "$MAIN_SCRIPTS_DIR/112_navio2_reboot.sh"
 
-touch "$INSTALL_FLAG"
+touch "$NAVIO2_KERNEL_INSTALL_FLAG"
 
 read -p "→ Navio2 kernel and overlays installed. Press ENTER to reboot." _
 sudo reboot

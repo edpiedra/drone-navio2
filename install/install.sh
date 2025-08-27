@@ -7,9 +7,6 @@ export MAIN_SCRIPTS_DIR="/home/pi/drone-navio2/shared/install/scripts"
 source "$MAIN_SCRIPTS_DIR/00_common.env"
 source "$MAIN_SCRIPTS_DIR/00_lib.sh"
 
-EXPANSION_INSTALL_LOG="$LOG_DIR/filesystem-expansion"
-NAVIO2_KERNAL_INSTALL_LOG="$LOG_DIR/navio2-kernel"
-
 if [ ! -d "$LOG_DIR" ]; then 
     mkdir "$LOG_DIR" 
 fi
